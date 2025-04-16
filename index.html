@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación Neuropsicológica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7f8;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #resultado {
+      margin-top: 30px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    p {
+      margin: 10px 0;
+    }
+  </style>
+  <script src="normas.js" defer></script>
+  <script src="zscore.js" defer></script>
+</head>
+<body>
+  <h2>Formulario de Evaluación Neuropsicológica</h2>
+  
+  <form id="neuroForm">
+    <label>Edad: <input type="number" name="edad" required></label><br>
+    <label>Educación (años): <input type="number" name="educacion" required></label><br>
+    
+    <h3>Resultados de pruebas</h3>
+    <label>MoCA: <input type="number" name="MoCA" step="0.1"></label><br>
+    <label>Craft Story 21 RI: <input type="number" name="Craft Story 21 RI" step="0.1"></label><br>
+    <label>RAVLT Aprendizaje total: <input type="number" name="RAVLT Aprendizaje total" step="0.1"></label><br>
+    <label>TMT A: <input type="number" name="TMT A" step="0.1"></label><br>
+    
+    <button type="submit">Calcular Z</button>
+  </form>
+
+  <div id="resultado"></div>
+</body>
+</html>
